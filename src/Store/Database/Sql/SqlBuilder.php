@@ -80,6 +80,10 @@ class SqlBuilder
             return $this;
         }
 
+        if($this->sqlMap['timestamps']){
+            $insert['created_at'] = $insert['updated_at'] = date("Y-m-d H:i:s");
+        }
+
         $columns = [];
         $values = [];
         foreach ($insert as $column => $value) {
@@ -104,11 +108,21 @@ class SqlBuilder
         }
         $insertsArr = [];
         $cloumns = array_keys($inserts[0]);
+
+        if($this->sqlMap['timestamps']){
+            $cloumns[] = 'created_at';
+            $cloumns[] = 'updated_at';
+        }
+
         $replace  = '(' . implode(',', $cloumns) . ') values ';
         foreach ($inserts as $insert) {
             $values = [];
             foreach ($insert as $value) {
                 $values[] = $this->formatValue($value);
+            }
+            if($this->sqlMap['timestamps']){
+                $values[] = "'".date("Y-m-d H:i:s")."'";
+                $values[] = "'".date("Y-m-d H:i:s")."'";
             }
             $insertsArr[] = '(' . implode(',', $values) . ')';
         }
@@ -264,6 +278,10 @@ class SqlBuilder
         if (count($update) == 0) {
             $this->sqlMap['sql'] = $this->replaceSqlLabel($this->sqlMap['sql'], 'data', '');
             return $this;
+        }
+
+        if($this->sqlMap['timestamps']){
+            $update[] = ['updated_at',date("Y-m-d H:i:s")];
         }
 
         $clauses = [];
