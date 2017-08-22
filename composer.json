@@ -17,6 +17,70 @@
         "type": "git",
         "url": "https://github.com/sukui/ws-server.git"
       },
+      "4": {
+        "type": "git",
+        "url": "https://github.com/sukui/server-base.git"
+      },
+      "5": {
+        "type": "git",
+        "url": "https://github.com/sukui/framework.git"
+      },
+      "6": {
+        "type": "git",
+        "url": "https://github.com/sukui/database.git"
+      },
+      "7": {
+        "type": "git",
+        "url": "https://github.com/sukui/http-client.git"
+      },
+      "8": {
+        "type": "git",
+        "url": "https://github.com/sukui/nova.git"
+      },
+      "9": {
+        "type": "git",
+        "url": "https://github.com/sukui/nova-foundation.git"
+      },
+      "10": {
+        "type": "git",
+        "url": "https://github.com/sukui/nova-client.git"
+      },
+      "11": {
+        "type": "git",
+        "url": "https://github.com/sukui/etcd-registry.git"
+      },
+      "12": {
+        "type": "git",
+        "url": "https://github.com/sukui/etcd-client.git"
+      },
+      "13": {
+        "type": "git",
+        "url": "https://github.com/sukui/testing.git"
+      },
+      "14": {
+        "type": "git",
+        "url": "https://github.com/sukui/connection-pool.git"
+      },
+      "15": {
+        "type": "git",
+        "url": "https://github.com/sukui/thrift-serialization.git"
+      },
+      "16": {
+        "type": "git",
+        "url": "https://github.com/sukui/nova-generic.git"
+      },
+      "17": {
+        "type": "git",
+        "url": "https://github.com/sukui/service-chain.git"
+      },
+      "18": {
+        "type": "git",
+        "url": "https://github.com/sukui/log.git"
+      },
+      "19": {
+        "type": "git",
+        "url": "https://github.com/sukui/trace.git"
+      },
       "packagist": {
         "type": "composer",
         "url": "https://packagist.phpcomposer.com"
@@ -52,5 +116,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": false
 }
